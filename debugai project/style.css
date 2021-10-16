@@ -1,0 +1,376 @@
+/*.............header................*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.title{
+  color: #302b63;
+}
+body{
+    font-family: sans-serif;
+}
+.nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.navbar{
+    background-image: linear-gradient(to left,#000046,#1CB5E0);
+    padding: 0 !important;
+}
+.navbar-brand img{
+    height: 40px;
+    padding-left: 10px;
+
+}
+.navbar-nav li{
+    padding: 0 10px;
+}
+.navbar-nav li a{
+    color: #FFEFBA !important;
+    font-weight: 600;
+    float: right;
+}
+
+/* ................banner.................... */
+
+#banner{
+    
+    background-image: linear-gradient(to left,#000046,#1CB5E0);
+    color: #FFEFBA;
+    padding-top: 3%;
+}
+.promo-title{
+    font-size: 40px;
+    font-weight: 600;
+    /* margin-top: 100px; */
+    color: #FFEFBA;
+}
+.bann{
+    margin-top: 100px;
+}
+
+.play-btn{
+    width: 40px;
+    margin: 20px;
+}
+#banner a{
+    color: #FFEFBA;
+    text-decoration: none;
+}
+.bottom-img{
+    width: 100%;
+}
+/*............................what-is-debugai................ */
+#whatisdebugai{
+  background: white;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+#whatisdebugai p{
+  margin-left: 20px;
+  margin-top: 60px;
+  font-weight: 5000;
+  font-size: large;
+}
+.title::after{
+  content: '';
+  background: #1CB5E0;
+  width: 200px;
+  height: 4px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(20px);
+}
+#whatisdebugai .bottom{
+  padding-left: 90px;
+
+  margin-top: 40px;
+  height: 87%;
+  /* float: right; */
+}
+
+/* ....................scrollsection..................... */
+#scrollsection .btn-primary{
+  background-image: linear-gradient(to left,#000046,#1CB5E0);
+  border-radius: 20px;
+  border: none;
+  padding: 12px 25px;
+  box-shadow: none;
+}
+
+
+/*....................register......................... */
+#register{
+  background-image: linear-gradient(to left,#FFFFFF,#6DD5FA,#FFFFFF);
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin: 80px 0;
+}
+#register ul{
+  margin-left: 20px;
+  margin-top: 120px;
+  font-size: larger;
+
+}
+#register .registerimg{
+  width: 80%;
+  margin-top: 60px;
+  margin-left: 60px;
+}
+
+
+/*...................... goodies....................... */
+#goodies{
+  margin: 150px 0;
+}
+.goodies p{
+  font-size:x-large;
+  margin: 60px 0;
+  text-align: center;
+}
+#goodies img{
+  width: 80%;
+  margin: 10px 10px;
+  margin-left: 60px;
+}
+#goodies .row{
+  padding-top: 60px;
+}
+#goodies .btn-primary{
+  background-image: linear-gradient(to left,#000046,#1CB5E0);
+  border-radius: 20px;
+  border: none;
+  padding: 12px 25px;
+  box-shadow: none;
+}
+
+/*..................... faq..................... */
+#faq{
+  margin: 150px 0;
+}
+.accordion {
+  background-image: linear-gradient(to left,#000046,#1CB5E0);
+  color: #fff;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  /* margin-left: 20px; */
+  outline: none;
+  border-radius:30px;
+  font-size: 25px;
+  transition: 1000s;
+  margin-top:  40px;
+}
+.panel {
+  /* padding: 0 18px; */
+  display: none;
+  font-size: larger;
+  /* background-image: linear-gradient(to left,#FFFFFF,#f7fafc,#FFFFFF); */
+  width: 90%;
+  margin-left: 20px;
+}
+#faq img{
+  width: 80%;
+  margin: 10px 10px;
+  margin-left: 60px;
+}
+.iconfa{
+  float: right;
+}
+.space{
+  margin-top: 60px;
+}
+
+
+/* ...........SOCIAL MEDIA ................*/
+
+#social-media{
+  background: #f8f9fa;
+  padding: 100px 0;
+}
+#social-media p{
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+}
+
+.social-icon img{
+  width: 60px;
+  transition: 0.5s;
+}
+#social-media a:hover img{
+  transform: translateY(-10px);
+}
+
+/* footer */
+.footer
+{
+  background-image: linear-gradient(to left,#000046,#1CB5E0);
+   color: #FFEFBA;
+   margin-bottom: 0 !important;
+   
+}
+.footer h3{
+  color: #FBD786;
+}
+.footer-img{
+    width: 100%;
+}
+.footer-box
+{
+    padding: 20px;
+}
+.footer-box p{
+    margin: 20px;
+}
+.footer-box img{
+    /* width: 160px; */
+    margin-left: 20px;
+}
+.footer-box .fa{
+    margin-right: 5px;
+}
+
+hr{
+background-color: #fff;
+margin: 0;
+}
+
+.copyright{
+    text-align: center;
+    padding-top: 10px;
+    margin: 0 0 !important;
+}
+.footer a{
+  color: #FFEFBA;;
+  text-decoration: none;
+}
+
+
+
+
+
+/* ABOUT US  */
+#aboutus{
+  background: #f8f9fa;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.abouttitle{
+  font-size: 40px;
+  font-weight:600;
+  margin-top: 8%;
+}
+#aboutus ul{
+  margin-left: 20px;
+
+}
+.llist{
+  padding: 30px;
+  /* text-align: center; */
+  font-size:x-large;
+  margin-top: 80px;
+  font-weight: 400;
+  font-style: oblique;
+}
+
+
+/*.................. contactus page............. */
+.form-style-6{
+	font: 95% Arial, Helvetica, sans-serif;
+	max-width: 400px;
+	margin: 10px auto;
+	padding: 16px;
+	background: #F7F7F7;
+}
+.form-style-6 input[type="text"],
+.form-style-6 input[type="date"],
+.form-style-6 input[type="datetime"],
+.form-style-6 input[type="email"],
+.form-style-6 input[type="tel"],
+.form-style-6 input[type="search"],
+.form-style-6 input[type="time"],
+.form-style-6 input[type="url"],
+.form-style-6 textarea,
+.form-style-6 select 
+{
+	-webkit-transition: all 0.30s ease-in-out;
+	-moz-transition: all 0.30s ease-in-out;
+	-ms-transition: all 0.30s ease-in-out;
+	-o-transition: all 0.30s ease-in-out;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	background: #fff;
+	margin-bottom: 4%;
+	border: 1px solid #ccc;
+	padding: 3%;
+	color: #555;
+	font: 95% Arial, Helvetica, sans-serif;
+}
+.form-style-6 input[type="text"]:focus,
+.form-style-6 input[type="date"]:focus,
+.form-style-6 input[type="datetime"]:focus,
+.form-style-6 input[type="email"]:focus,
+.form-style-6 input[type="number"]:focus,
+.form-style-6 input[type="search"]:focus,
+.form-style-6 input[type="time"]:focus,
+.form-style-6 input[type="url"]:focus,
+.form-style-6 textarea:focus,
+.form-style-6 select:focus
+{
+	padding: 3%;
+	border: 1px solid #43D1AF;
+}
+
+.form-style-6 input[type="submit"],
+.form-style-6 input[type="button"]{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	width: 100%;
+	padding: 3%;
+	background-image: linear-gradient(to left,#000046,#1CB5E0);
+   color: #FFEFBA;
+	border-bottom: 2px solid #30C29E;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;	
+}
+.form-style-6 input[type="submit"]:hover,
+.form-style-6 input[type="button"]:hover{
+	background-image: linear-gradient(to left,#FFEFBA,#fff);
+   color: #6e1a8f;
+}
+.no-arrow {
+  -moz-appearance: textfield;
+}
+.no-arrow::-webkit-inner-spin-button {
+  display: none;
+}
+.no-arrow::-webkit-outer-spin-button,
+.no-arrow::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.logo{
+
+  width: 20% !important;
+  height: 20% !important;
+}
+
+.navbar-brand{
+   
+  width: 50%;
+}
+
+

@@ -1,0 +1,353 @@
+<html>
+<head>
+<link rel="shortcut icon" href="debug.png" /> 
+<title>debugAI</title>
+<script type="text/javascript">
+<!--
+if (screen.width > 699) {
+document.location = "details-fasttrack.html";
+}
+//-->
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<style>
+body{
+background-color: white;
+}
+.skin{
+	background-color:lightgrey;
+}
+.navbar-toggler span {
+    display: block;
+    background-color: #4f4f4f;
+    height: 8px;
+    width: 85px;
+    margin-top: 11px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    border-radius:10px;
+    position: relative;
+    left: 0;
+    opacity: 1;
+    transition: all 0.35s ease-out;
+    transform-origin: center left;
+}
+
+
+/* top line needs a little padding */
+.navbar-toggler span:nth-child(1) {
+    margin-top: 0.3em;
+}
+
+/**
+ * Animate collapse into X.
+ */
+
+/* top line rotates 45 degrees clockwise and moves up and in a bit to close the center of the X in the center of the button */
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    transform: translate(15%, -33%) rotate(30.5deg);
+}
+/* center line goes transparent */
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    opacity: 0;
+}
+/* bottom line rotates 45 degrees counter clockwise, in, and down a bit to close the center of the X in the center of the button  */
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    transform: translate(15%, 33%) rotate(-30.5deg) ;
+}
+
+
+/**
+ * Animate collapse open into hamburger menu
+ */
+
+/* top line moves back to initial position and rotates back to 0 degrees */
+.navbar-toggler span:nth-child(1) {
+    transform: translate(0%, 0%) rotate(0deg) ;
+}
+/* middle line goes back to regular color and opacity */
+.navbar-toggler span:nth-child(2) {
+    opacity: 1;
+}
+/* bottom line goes back to initial position and rotates back to 0 degrees */
+.navbar-toggler span:nth-child(3) {
+    transform: translate(0%, 0%) rotate(0deg) ;
+}
+
+a:link {
+  color: black;
+text-decoration: none;
+}
+a:visited {
+  color: #303030;
+text-decoration: none;
+}
+a:hover {
+  color: brown;
+ text-decoration: none;
+}
+a:active {
+  color: brown;
+ text-decoration: none;
+}
+.center1 {
+  
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.next {
+   display: inline-block;
+  padding: 15px 25px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: lightgrey;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+.next:active {
+  background-color: #fff;
+  color:black;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 80%;
+  border: none;
+  display:block;
+  margin: 0 auto;
+  text-align: center;
+  outline: none;
+  border-radius:0px;
+  font-size: 40px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+.panel {
+  padding: 0 18px;
+  font-size:40px;
+  display: none;
+  margin: 0 auto;
+  background-color: white;
+  width: 80%;
+}
+.below{
+	margin-left:250px;
+	font-family:sans-serif;
+	font-size:40px;
+	}
+.below:hover{
+	text-decoration:none;
+	}
+.below:active{
+	font-size:45px;
+	text-decoration:none;
+	}
+.hero-image {
+  background-image: url("/w3images/photographer.jpg");
+  background-color: #cccccc;
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+</style>
+</head>
+<body style="background-color:white;">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+
+<!-- Bootstrap Navigation -->
+<nav class="navbar bg-light" >
+        <a class="navbar-toggler collapsed border-0" style="margin-top:20px;margin-bottom:20px;" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+            <span> </span>
+            <span> </span>
+            <span> </span>
+        </a>
+        <a class="navbar-brand">
+            
+<div align="center"><a href="mobile.html"><img src="logo(1).png" width="350px" style=margin-top:-6px;> </a></div>
+        </a>
+        <div class="collapse navbar-collapse" style="background-color:white;margin-left:60px;" id="collapsingNavbar">
+            <ul class="nav navbar-nav" style="font-size:45px;">
+            <hr/>
+                <li class="nav-item">
+                    <a class="nav-link" href="mobile.html">Home</a>
+                    <hr/>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Aboutus1.html">About us</a>
+                    <hr/>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="fasttrack1.html" style="color:blue;">Fast track</a>
+                    <hr/>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="programs1.html">Programs</a>
+                    <hr/>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                    <hr/>
+                </li>
+            </ul>
+        </div>
+</nav>
+<a href="https://api.whatsapp.com/send?phone=+91%209121410524&text=*Chat%20with%20us%20on%20WhatsApp*%0A"><img src="wp.png" alt="Chat with us" width="150px" style="border-radius:45px;position:fixed;right:60px;bottom:60px;"/></a>
+<br/><br/><br/><br/>
+<div align = "center">
+<img src="ft.png" width="700px;" style="border-radius:10px;"/>
+</div>
+<br/><br/><br/><br/>
+<div align="center" >
+<div style="border:double;width:80%;border-radius:10px;">
+<div style="background-color:lightgrey;">
+<p align="center" style="font-size:60px;font-family:'Brush Script MT';">APPLICATION FORM</p>
+<p align="center" style="font-size:30px;font-family:'Brush Script MT';">Fast Track Training</p><br/>
+</div><br/>
+  <form method="post" autocomplete="off" name="google-sheet" style="font-size:40px;">
+  
+     <label for="Name">Enter your Name</label><br/>
+     
+     <input type="text" name="Name" style="width:70%;font-size:40px;" class="form-control" placeholder="Your Name " value="" required=""/><br/>
+    
+     
+     <label for="Email">Enter your Mail Id</label><br/>
+     
+     <input type="text" name="Email" style="width:70%;font-size:40px;" class="form-control" placeholder="Your Email " value="" required=""/><br/>
+     
+     
+     <label for="Phone">Enter your Mobile Number</label><br/>
+     
+     <input type="text" name="Phone" style="width:70%;font-size:40px;" class="form-control" placeholder="Your Contact Number " value="" required=""/><br/>
+     
+     <label for="message">Enter your Institute</label><br/>
+     
+     <input type="text" name="Institute" style="width:70%;font-size:40px;" class="form-control" placeholder="Your Institute Name" value="" required=""/><br/>
+     
+     
+     <label for="Phone">Year of Study</label><br/>
+     <select name="Study" class="form-control" style="width:70%;font-size:40px;" placeholder="Your Contact Number " value="" required=""/>
+     <option value="1 year">1ˢᵗ Year</option>
+  	<option value="2 year">2ⁿᵈ Year</option>
+ 	 <option value="3 year">3ʳᵈ Year</option>
+ 	 <option value="4 year">4ᵗʰ Year</option>
+ 	 <option value="5 year">5ᵗʰ Year & More</option>
+ 	 <option value="pass out">Passedout's</option>
+     </select>
+     <br/>
+     <label for="message">Enter your Department</label><br/>
+     
+     <input type="text" name="department" style="width:70%;font-size:40px;" class="form-control" placeholder="Your Department" value="" required=""/><br/>
+     <label for="Phone">Program Preference</label><br/>
+     <select name="intern" class="form-control" style="width:70%;font-size:40px;" placeholder="Your Contact Number " value="" required=""/>
+  	<option value="fast track" disabled selected>Select Preference </option>
+  	<option value="C fast track">C Programming</option>
+  	<option value="C++ fast track">C++ Programming </option>
+  	<option value="Python fast track">Python Programming </option>
+  	<option value="Webd fast track">Web Development </option>
+  	<option value="Data Structures fast track">Data Structures </option>
+  	<option value="Digital Logic fast track">Digital Electronics </option>
+     </select>
+     <br/><br/>
+    <label for="message">Enter Referral Number(if any)</label><br/>
+     
+     <input type="text" name="refer" style="width:70%;font-size:40px;" class="form-control" placeholder="Referral Number" value=""/><br/>
+     <input onclick="change()" type="submit" name="submit" id="myButton1" style="width:50%;" class="btnSubmit btn-block" value="Apply Now" />
+  </form>
+  </div>
+  <script>
+  function change() 
+{
+    var elem = document.getElementById("myButton1");
+    if (elem.value=="Apply Now") elem.value = "Processing...";
+    else elem.value = "Apply Now";
+}
+            const scriptURL =' #google sheets link'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => window.location.href = 'https://rzp.io/l/KX1p8kMa' )
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</div>
+</div>
+</div>
+<br/><br/><br/>
+<div align="center">
+<p style="font-size:45px;font-family:arial;"><b> After filling your details </b></p>
+</div>
+<ul style="margin-left:50px;font-size:40px;">
+<li>Refer this to your friends and learn together</li>
+<li style="margin-top:10px;"> No need of any prerequisites everything is covered from beginning in this bootcamp</li>
+<li style="margin-top:10px;"> The further steps for registration will be informed via mail</li>
+<li style="margin-top:10px;"> All main concepts will be covered here</li>
+<li style="margin-top:10px;"> Get familiar with Industrial Projects</li>
+<li style="margin-top:10px;"> Flexible time hours throughout the program</li>
+<li style="margin-top:10px;">Fast and reliable program</li>
+<li style="margin-top:10px;"> Even after the program get connected with our experts and solve your queries</li>
+<li style="margin-top:10px;"> If you have any queries please drop it in our <a href="contactus.html"><ins>Contact us</ins></a> section </li>
+</ul>
+<br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/><br/><br/>
+<hr/>
+<br/><br/><br/><br/>
+<br/><br/><br/><br/><br/><br/>
+<div class="skin" ><br/></br>
+<p style="font-size:40px;margin-left:40px;"><a href="mailto:info@debugai.in"><img src="mail.png" width="72px;" style="float:left;margin-top:-7px;">  info@debugai.in</a></p></br></br>
+<p style="font-size:40px;margin-left:40px;"><img src="phone.png" width="70px;" style="float:left;">  +91 9121410524</p></br></br>
+<p style="font-size:40px;float:left;margin-left:40px;">Follow us on :<br/> </p>
+<a href = "https://www.instagram.com/debugai/" target="_blank" ><img src="insta.png" width="80px;" style="margin-left:20px;"> </a> 
+<a href = "https://www.facebook.com/Debugai-102568801751862" target="_blank"><img src="fb.png" width="70px;" style="margin-left:30px;"> </a>
+<a href = "https://www.linkedin.com/company/72645472/" target="_blank"><img src="in.png" width="70px;" style="margin-left:30px;border-radius:5px;"> </a><br/><br/>
+</br></br>
+<p style="font-size:40px;margin-left:40px;font-weight: 400;">Quick links :<br/> </p>
+ <div style="font-family:arial;">
+ <a href="mobile.html" class="below" style="color:#303030;"> Home </a></br></br>
+ <a href="Aboutus1.html" class="below" style="color:#303030;"> About us </a></br></br>
+ <a href="fasttrack1.html" class="below" style="color:#303030;"> Fast track </a></br></br>
+ <a href="programs1.html" class="below" style="color:#303030;"> Programs </a></br></br>
+ <a href="contact.html" class="below" style="color:#303030;"> Contact us  </a></br></br></br>
+<footer style= "color:white;background-color:black;"><br/>
+<p align="center" style="font-size:30px;">Copyright © 2021 debugAI All Rights Reserved.</p>
+<p align="center" >
+<a href="tnc.html"  style="font-size:30px;color:white;">Terms and conditions</a>  ,  <a href="privacy_policy.html"  style="font-size:30px;color:white;">Privacy Policy</a> , <a href="refund_policy.html"  style="font-size:30px;color:white;">Refund Policy</a>
+</p></br>
+</footer>
+</div>
+</body>
+</html>
